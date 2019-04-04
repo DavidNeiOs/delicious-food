@@ -8,7 +8,7 @@ mixin storeForm(store = {})
     label(for="photo") Photo
       input(type="file" name="photo" id="photo" accept="image/gif, image/png, image/jpeg")
       if store.photo
-        img(src=`/uploads/${photo}`, alt=store.name width=200)
+        img(src=`/uploads/${store.photo}`, alt=store.name width=200)
     //- address, lng lat
     label(for="address") Address
     input(type="text" id="address" name="location[address]" value=(store.location && store.location.address))
